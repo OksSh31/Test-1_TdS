@@ -1,8 +1,19 @@
 [build]
-  publish = "."  # Publish the root directory
-  command = ""   # No build command needed for plain HTML
+  publish = "."
+  command = ""
 
+# Дозволяємо доступ до success.html напряму
+[[redirects]]
+  from = "/success.html"
+  to = "/success.html"
+  status = 200
+
+# Усі інші шляхи → index.html
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+
+
+
+
