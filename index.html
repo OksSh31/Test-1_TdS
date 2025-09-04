@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>ТДСтФ Тест</title>
+<style>
+  body { font-family: Arial, sans-serif; background: #f0f6fc; display: flex; justify-content: center; align-items: center; height: 100vh; }
+  form { background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.2); width: 600px; max-height: 95vh; overflow-y: auto; }
+  label { display: block; margin-bottom: 10px; }
+  input, button { padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 6px; }
+  input[type="text"], input[type="email"] { width: 100%; }
+  button { width: 100%; background: #007BFF; color: #fff; font-weight: bold; border: none; cursor: pointer; }
+  button:hover { background: #0056b3; }
+  #result { margin-top: 15px; font-weight: bold; color: green; }
+</style>
+</head>
+<body>
+
+<form id="testForm" name="tdstf-test" method="POST" action="success.html">
+  <input type="hidden" name="form-name" value="tdstf-test">
+  <h2>Тест з ТДСтФ</h2>
+  <div id="timer" style="font-weight:bold; color:red; margin-bottom:15px;">Час: 1:00</div>
+
+  <label>Ім’я та прізвище:<input type="text" name="fullname" required></label>
+  <label>Email:<input type="email" name="email" required></label>
+
+  <!-- 20 питань -->
+  <div class="question"><p>1. Термодинаміка вивчає:</p>
+    <label><input type="radio" name="q1" value="1"> процеси перетворення тепла, роботи та енергії</label>
+    <label><input type="radio" name="q1" value="0"> лише механічний рух тіл</label>
+    <label><input type="radio" name="q1" value="0"> виключно мікроскопічні процеси</label>
+  </div>
+
+  <div class="question"><p>2. Статистична фізика встановлює властивості систем за допомогою:</p>
+    <label><input type="radio" name="q2" value="1"> статистичних усереднень руху частинок</label>
+    <label><input type="radio" name="q2" value="0"> експериментальних законів без пояснення мікроприроди</label>
+    <label><input type="radio" name="q2" value="0"> законів класичної механіки для макротіл</label>
+  </div>
+
+  <div class="question"><p>3. До феноменологічних моделей відноситься:</p>
+    <label><input type="checkbox" name="q3" value="1"> термодинаміка</label>
+    <label><input type="checkbox" name="q3" value="1"> електродинаміка Максвелла</label>
+    <label><input type="checkbox" name="q3" value="0"> квантова механіка</label>
+  </div>
+
+  <div class="question"><p>4. Термодинамічна система – це:</p>
+    <label><input type="radio" name="q4" value="1"> сукупність тіл, що можуть обмінюватися енергією і частинками</label>
+    <label><input type="radio" name="q4" value="0"> окрема частинка в вакуумі</label>
+    <label><input type="radio" name="q4" value="0"> лише ідеальний газ</label>
+  </div>
+
+  <div class="question"><p>5. Межі термодинамічної системи можуть бути:</p>
+    <label><input type="checkbox" name="q5" value="1"> реальними</label>
+    <label><input type="checkbox" name="q5" value="1"> умовними</label>
+    <label><input type="checkbox" name="q5" value="0"> відсутніми</label>
+  </div>
+
+  <div class="question"><p>6. Макроскопічна система – це:</p>
+    <label><input type="radio" name="q6" value="1"> система з великої кількості мікрочастинок</label>
+    <label><input type="radio" name="q6" value="0"> одна молекула</label>
+    <label><input type="radio" name="q6" value="0"> атом водню</label>
+  </div>
+
+  <div class="question"><p>7. Макроскопічні параметри – це:</p>
+    <label><input type="radio" name="q7" value="1"> величини, що характеризують систему як ціле (об’єм, густина)</label>
+    <label><input type="radio" name="q7" value="0"> координати окремих молекул</label>
+    <label><input type="radio" name="q7" value="0"> спін електрона</label>
+  </div>
+
+  <div class="question"><p>8. Зовнішні параметри системи:</p>
+    <label><input type="radio" name="q8" value="1"> об’єм посудини</label>
+    <label><input type="radio" name="q8" value="0"> температура молекул</label>
+    <label><input type="radio" name="q8" value="1"> напруженість зовнішнього поля</label>
+  </div>
+
+  <div class="question"><p>9. Внутрішні параметри визначаються:</p>
+    <label><input type="radio" name="q9" value="1"> рухом та положенням частинок у системі</label>
+    <label><input type="radio" name="q9" value="0"> тільки властивостями зовнішнього середовища</label>
+    <label><input type="radio" name="q9" value="0"> формою посудини</label>
+  </div>
+
+  <div class="question"><p>10. До інтенсивних параметрів належать:</p>
+    <label><input type="checkbox" name="q10" value="1"> температура</label>
+    <label><input type="checkbox" name="q10" value="1"> тиск</label>
+    <label><input type="checkbox" name="q10" value="0"> об’єм</label>
+    <label><input type="checkbox" name="q10" value="0"> ентропія</label>
+  </div>
+
+  <div class="question"><p>11. До екстенсивних параметрів належать:</p>
+    <label><input type="checkbox" name="q11" value="1"> внутрішня енергія</label>
+    <label><input type="checkbox" name="q11" value="1"> ентропія</label>
+    <label><input type="checkbox" name="q11" value="0"> густина</label>
+    <label><input type="checkbox" name="q11" value="0"> температура</label>
+  </div>
+
+  <div class="question"><p>12. Функції стану залежать від:</p>
+    <label><input type="radio" name="q12" value="1"> лише поточного стану системи</label>
+    <label><input type="radio" name="q12" value="0"> історії процесу</label>
+    <label><input type="radio" name="q12" value="0"> шляху переходу</label>
+  </div>
+
+  <div class="question"><p>13. Стан рівноваги – це стан, коли:</p>
+    <label><input type="radio" name="q13" value="1"> усі параметри з часом незмінні</label>
+    <label><input type="radio" name="q13" value="0"> система перебуває в русі</label>
+    <label><input type="radio" name="q13" value="0"> параметри змінюються хаотично</label>
+  </div>
+
+  <div class="question"><p>14. Нульовий постулат термодинаміки стверджує, що:</p>
+    <label><input type="radio" name="q14" value="1"> будь-яка ізольована система приходить до рівноваги</label>
+    <label><input type="radio" name="q14" value="0"> енергія зберігається</label>
+    <label><input type="radio" name="q14" value="0"> температура не змінюється</label>
+  </div>
+
+  <div class="question"><p>15. Ізольована система:</p>
+    <label><input type="radio" name="q15" value="1"> не обмінюється ні енергією, ні речовиною з оточенням</label>
+    <label><input type="radio" name="q15" value="0"> взаємодіє з зовнішніми тілами</label>
+    <label><input type="radio" name="q15" value="0"> постійно змінює температуру</label>
+  </div>
+
+  <div class="question"><p>16. Температура – це:</p>
+    <label><input type="radio" name="q16" value="1"> універсальна характеристика рівноважних систем</label>
+    <label><input type="radio" name="q16" value="0"> виключно середня швидкість молекул</label>
+    <label><input type="radio" name="q16" value="0"> кількість теплоти в тілі</label>
+  </div>
+
+  <div class="question"><p>17. Динамічний (механічний) метод у фізиці вважається:</p>
+    <label><input type="radio" name="q17" value="0"> ефективним для систем із 10^19 молекул</label>
+    <label><input type="radio" name="q17" value="1"> практично непридатним для макросистем</label>
+    <label><input type="radio" name="q17" value="0"> єдино можливим методом</label>
+  </div>
+
+  <div class="question"><p>18. Статистичний метод дозволяє:</p>
+    <label><input type="radio" name="q18" value="1"> визначати макроскопічні властивості як усереднення мікропроцесів</label>
+    <label><input type="radio" name="q18" value="0"> описувати тільки мікроскопічні системи</label>
+    <label><input type="radio" name="q18" value="0"> замінює термодинаміку повністю</label>
+  </div>
+
+  <div class="question"><p>19. Феноменологічний метод базується на:</p>
+    <label><input type="radio" name="q19" value="1"> узагальненні експериментальних фактів</label>
+    <label><input type="radio" name="q19" value="0"> рівняннях Ньютона для частинок</label>
+    <label><input type="radio" name="q19" value="0"> тільки квантових законах</label>
+  </div>
+
+  <div class="question"><p>20. Термодинаміка та статистична фізика вивчають:</p>
+    <label><input type="radio" name="q20" value="1"> тепловий рух у макросистемах</label>
+    <label><input type="radio" name="q20" value="0"> рух однієї частинки</label>
+    <label><input type="radio" name="q20" value="0"> тільки квантові процеси в атомі</label>
+  </div>
+
+  <button type="button" onclick="checkAnswers()">Перевірити</button>
+  <div id="result"></div>
+  <button type="submit">Відправити</button>
+</form>
+
+<script>
+// Таймер 5 хв
+let time = 300;
+const timerEl = document.getElementById("timer");
+const countdown = setInterval(() => {
+  let minutes = Math.floor(time/60);
+  let seconds = time % 60;
+  timerEl.textContent = `Час: ${minutes}:${seconds < 10 ? '0'+seconds : seconds}`;
+  time--;
+  if(time < 0) {
+    clearInterval(countdown);
+    checkAnswers();
+    document.getElementById("testForm").submit();
+  }
+}, 1000);
+
+// Правильні відповіді
+const correctAnswers = {
+  q1:"1", q2:"1", q3:["1","1"], q4:"1", q5:["1","1"],
+  q6:"1", q7:"1", q8:"1", q9:"1", q10:["1","1"],
+  q11:["1","1"], q12:"1", q13:"1", q14:"1", q15:"1",
+  q16:"1", q17:"1", q18:"1", q19:"1", q20:"1"
+};
+
+function checkAnswers() {
+  let score = 0;
+  const total = 20;
+  Object.keys(correctAnswers).forEach(q => {
+    const inputs = document.querySelectorAll(`input[name="${q}"]`);
+    const correct = correctAnswers[q];
+    if(Array.isArray(correct)) { // checkbox
+      let isCorrect = true;
+      inputs.forEach(input => {
+        const shouldBeChecked = correct.includes(input.value);
+        if((input.checked && !shouldBeChecked) || (!input.checked && shouldBeChecked)) {
+          isCorrect = false;
+        }
+      });
+      if(isCorrect) score++;
+    } else { // radio
+      inputs.forEach(input => {
+        if(input.checked && input.value === correct) score++;
+      });
+    }
+  });
+  document.getElementById("result").textContent = `Ваш результат: ${score} з ${total}`;
+}
+</script>
+
+</body>
+</html>
