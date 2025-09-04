@@ -2,18 +2,15 @@
   publish = "."
   command = ""
 
-# Дозволяємо доступ до success.html напряму
+# Виняток для success.html
 [[redirects]]
   from = "/success.html"
   to = "/success.html"
   status = 200
 
-# Усі інші шляхи → index.html
+# Всі інші шляхи → index.html
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
-
-
-
 
